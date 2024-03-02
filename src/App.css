@@ -1,38 +1,276 @@
-.App {
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  background: #aaa;
+}
+
+nav {
+  background: #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+.nav_wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar_logo {
+  padding-left: 10px;
+  height: 100%;
+}
+
+.nav_wrap a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav_left {
+  display: flex;
+  font-size: 2rem;
+  height: 70px;
+}
+
+.navbar_server,
+.navbar_review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.nav_left img {
+  height: 70px;
+}
+
+.nav_list {
+  width: 150px;
+  height: 70px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+.nav_list svg {
+  margin-right: 10px;
+}
+
+.nav_list:hover {
+  background: #000;
+  color: #FFF;
+  transition: all 0.3s;
+}
+
+.intro {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 530px;
+}
+
+.intro_2 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: #ccc;
+}
+
+.intro_2 p {
+  font-size: 1.3rem;
+}
+
+.inner_intro {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.intro h2,
+.intro h3 {
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro h2 {
+  font-size: 4rem;
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.intro h3 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.search_bar {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 615px;
+  height: 70px;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.search_bar input {
+  font-size: 2rem;
+  border: none;
+  line-height: normal;
+}
+
+.search_bar input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.search_bar svg {
+  font-size: 2rem;
+  padding: 0 10px 0 13px;
+}
+
+.search_btn {
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  width: 120px;
+  height: 70px;
+  margin-left: 5px;
+  background: #eee;
+  transition: all 0.3s;
+}
+
+.search_btn:hover {
+  background: #ccc;
+  transition: all 0.3s;
+}
+
+.category_tag_wrap {
+  text-align: center;
+  height: 250px;
+  background: #eee;
+  padding-top: 20px;
+}
+
+.inner_category_tag_wrap {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 1320px;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.cat_title {
+  width: 200px;
+  text-align: right;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cat_title h3 {
+  margin: 0 10px 0 0;
+  font-size: 2.6rem;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+}
+
+.category_tag_container {
+  width: 900px;
+}
+
+.categories {
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.tags {
+  height: 140px;
+  background: #ccc;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  overflow: hidden;
+}
+
+.categories li{
+  border: 1px solid black;
+  height: 35px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+
+.tags li {
+  border: 1px solid black;
+  height: 28px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-left: 5px;
+  margin: 5px 3px 0px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#bg_amp {
+  font-size: 100px;
+  position: absolute;
+  top: -15px;
+  right: 50px;
+  color: rgba(44, 44, 44, 0.6);
+  z-index: 0;
+}
+
+.collapse_btn {
+  width: 100px;
+  height: 50px;
+  font-size: 3rem;
+  border: none;
+  margin-top: 5px;
+  transition: all 0.3s;
+}
+
+.collapse_btn:hover {
+  background: #ccc;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
 }
